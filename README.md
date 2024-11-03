@@ -1,2 +1,2 @@
 # Lizzard Clicker!
-# Перкйдите в бота [TG] (@Marat555GptBot)
+# Перкйдите в бота [TG](@Marat555GptBot)
