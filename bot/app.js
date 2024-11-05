@@ -1,5 +1,4 @@
 import {session, Telegraf} from 'telegraf'
-import {message} from 'telegraf/filters';
 import {handle} from './commands.js';
 import 'dotenv/config'
 
@@ -21,3 +20,4 @@ function init() {
 }
 
 init();
+
