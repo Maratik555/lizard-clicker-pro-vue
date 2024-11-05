@@ -2,12 +2,12 @@
   "name": "bot",
   "version": "1.0.0",
   "main": "app.js",
+  "author": "Marat 555",
   "type": "module",
   "scripts": {
     "start": "node app.js -p 3000"
   },
   "keywords": ["telegram", "bot", "node", "mini app"],
-  "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {

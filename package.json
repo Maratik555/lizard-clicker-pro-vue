@@ -2,6 +2,7 @@
   "name": "vue-project",
   "version": "0.0.0",
   "private": true,
+  "author": "Marat 555",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.46.1",
+    "lodash.debounce": "^4.0.8",
     "pinia": "^2.1.7",
     "vue": "^3.4.29",
     "vue-router": "^4.3.3"
