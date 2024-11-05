@@ -20,6 +20,6 @@ const router = createRouter({
       component: () => import('../views/FriendsView.vue'),
     },
   ],
-})
+});
 
 export default router

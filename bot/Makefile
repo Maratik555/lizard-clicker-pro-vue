@@ -1,0 +1,1 @@
+build:  docker build -t marat555bot .run:  docker run -d -p 3000:3000 --name marat555bot --rm marat555bot

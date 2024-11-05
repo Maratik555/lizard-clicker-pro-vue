@@ -1,12 +1,23 @@
-import {Telegraf, Markup} from 'telegraf'
+import {session, Telegraf} from 'telegraf'
+import {message} from 'telegraf/filters';
+import {handle} from './commands.js';
 import 'dotenv/config'
 
-const bot = new Telegraf(process.env.BOT_TOKEN);
+let commands = [];
 
-const webAppUrl = 'https://clicker-555-pro.web.app';
-
-bot.command('start', (ctx) => {
-  ctx.reply(`Hello! Press to start the App`, Markup.inlineKeyboard([Markup.button.webApp('Open mini app', `${webAppUrl}?ref=${ctx.payload}`)]) );
+const bot = new Telegraf(process.env.BOT_TOKEN, {
+  webHook: {
+    port: process.env.PORT || 3000
+  }
 });
 
-bot.launch();
+function init() {
+  bot.use(session());
+  commands = [handle(bot)];
+  for(const command of commands) {
+    command?.handle()
+  }
+  bot.launch();
+}
+
+init();
